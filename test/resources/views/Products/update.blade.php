@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>crud category</title>
     <link rel="stylesheet" href="{{ asset('/css/app.css') }}" >
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -25,12 +25,12 @@
 
                 <ul class="sidebar_nav">
                    
-                    <li class="sidebar_item">
-                        <a href="candidat.php" class="sidebar_link"> <img src="img/agents.svg" alt="icon">Candidat</a>
+                    <li class="sidebar_item ">
+                        <a href="/category" class="sidebar_link"> <img src="img/agents.svg" alt="icon">Categorys</a>
                     </li>
                    
-                    <li class="sidebar_item">
-                        <a href="article.php" class="sidebar_link"><img src="img/articles.svg" alt="icon">Articles</a>
+                    <li class="sidebar_item active">
+                        <a href="/product" class="sidebar_link"><img src="img/articles.svg" alt="icon">Products</a>
                     </li>
 
                 </ul>
@@ -89,7 +89,53 @@
                 </div>
             </nav>
 
+            <div class="container">
 
+                <div class="row">
+        
+                    <div class="col s12">
+                        <h1>Modifier product</h1>
+                        @if (session('status'))
+                            <div class="alert alert-success">
+                                {{session('status')}}
+                            </div>
+                        @endif
+                        <form action="/update/traitement" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <input type="text"name="id" style="display: none;"value="{{$product->id}}" >
+                            <div class="mb-3">
+                              <label for="Description" class="form-label">Description</label>
+                              <input type="text" class="form-control" id="description" name="description" value="{{$product->description}}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Prix" class="form-label">Prix</label>
+                                <input type="text" class="form-control" id="prix" name="prix" value="{{$product->prix}}">
+                              </div>
+                              <div class="mb-3">
+                                <label for="Image" class="form-label">Image</label>
+                                <input type="file" class="form-control" id="image" name="image" value="{{$product->image}}">
+                              </div>
+                              <div class="mb-3">
+                                <label for="Tags" class="form-label">Tags</label>
+                                <input type="text" class="form-control" id="tags" name="tags" value="{{$product->tags}}">
+                              </div>
+                              <div class="mb-3">
+                                <label for="Category" class="form-label">Category</label>
+                                <select class="form-control" name="category_id" data-placeholder="choose a category">
+                                    @foreach($categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @endforeach
+                                </select>                             
+                             </div>
+                           
+                            <button type="submit" class="btn btn-primary">Modifier</button>
+                            <a  href="/product" type="button" class="btn btn-outline-primary">Cancel</a>
+        
+                          </form>
+                    </div>
+                </div>
+            </div>
+        
 
 
 

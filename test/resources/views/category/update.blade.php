@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>crud category</title>
     <link rel="stylesheet" href="{{ asset('/css/app.css') }}" >
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -25,12 +25,12 @@
 
                 <ul class="sidebar_nav">
                    
-                    <li class="sidebar_item">
-                        <a href="candidat.php" class="sidebar_link"> <img src="img/agents.svg" alt="icon">Candidat</a>
+                    <li class="sidebar_item active">
+                        <a href="/category" class="sidebar_link"> <img src="img/agents.svg" alt="icon">Categorys</a>
                     </li>
                    
                     <li class="sidebar_item">
-                        <a href="article.php" class="sidebar_link"><img src="img/articles.svg" alt="icon">Articles</a>
+                        <a href="/product" class="sidebar_link"><img src="img/articles.svg" alt="icon">Products</a>
                     </li>
 
                 </ul>
@@ -89,7 +89,33 @@
                 </div>
             </nav>
 
+            <div class="container">
 
+                <div class="row">
+        
+                    <div class="col s12">
+                        <h1>Modifier category</h1>
+                        @if (session('status'))
+                            <div class="alert alert-success">
+                                {{session('status')}}
+                            </div>
+                        @endif
+                        <form action="/update/traitement" method="POST">
+                            @csrf
+                            <input type="text"name="id" style="display: none;"value="{{$category->id}}">
+                            <div class="mb-3">
+                              <label for="Nom" class="form-label">Nom</label>
+                              <input type="text" class="form-control" id="nom" name="name" value="{{$category->name}}">
+                            </div>
+                           
+                            <button type="submit" class="btn btn-primary">Modifier</button>
+                            <a  href="/category" type="button" class="btn btn-outline-primary">Cancel</a>
+        
+                          </form>
+                    </div>
+                </div>
+            </div>
+        
 
 
 
@@ -98,11 +124,11 @@
 
 
             
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="{{ asset('js/dashboard.js') }}"></script>
-    <script src="{{ asset('js/script.js') }}"></script>
-</body>
-
-</html>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="{{ asset('js/dashboard.js') }}"></script>
+        <script src="{{ asset('js/script.js') }}"></script>
+    </body>
+    
+    </html>
