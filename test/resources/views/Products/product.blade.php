@@ -20,7 +20,7 @@
             <div class="h-100">
                 <div class="sidebar_logo d-flex align-items-end">
                     
-                    <a href="test.blade.php" class="nav-link text-white-50">Dashboard</a>
+                    <a href="test.blade.php" class="nav-link text-white-50">Adidas</a>
                     <img class="close align-self-start" src="img/close.svg" alt="icon">
                 </div>
 

@@ -15,9 +15,9 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', function () {
-    return view('test');
-});
+// Route::get('/', function () {
+//     return view('test');
+// });
 Route::get('/category', [CategoryController::class,'liste_category']);
 Route::post('/update/traitement', [CategoryController::class,'update_category_traitement']);
 Route::get('/ajouter', [CategoryController::class,'ajouter_category']);
