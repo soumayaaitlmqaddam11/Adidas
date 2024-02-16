@@ -1,108 +1,267 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx" class="no-js">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{ asset('/css/app.css') }}" >
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="assets/img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="CodePixar">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Karma Shop</title>
+	<!--
+		CSS
+		============================================= -->
+	<link rel="stylesheet" href="assets/css/linearicons.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/themify-icons.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="assets/css/nice-select.css">
+	<link rel="stylesheet" href="assets/css/nouislider.min.css">
+	<link rel="stylesheet" href="assets/css/ion.rangeSlider.css" />
+	<link rel="stylesheet" href="assets/css/ion.rangeSlider.skinFlat.css" />
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <aside id="sidebar" class="side">
-            <div class="h-100">
-                <div class="sidebar_logo d-flex align-items-end">
-                    
-                    <a href="test.blade.php" class="nav-link text-white-50">Dashboard</a>
-                    <img class="close align-self-start" src="img/close.svg" alt="icon">
-                </div>
 
-                <ul class="sidebar_nav">
-                   
-                    <li class="sidebar_item">
-                        <a href="candidat.php" class="sidebar_link"> <img src="img/agents.svg" alt="icon">Candidat</a>
-                    </li>
-                   
-                    <li class="sidebar_item">
-                        <a href="article.php" class="sidebar_link"><img src="img/articles.svg" alt="icon">Articles</a>
-                    </li>
+	<!-- Start Header Area -->
+	<header class="header_area sticky-header">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light main_box">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h" href="index.html"><img src="assets/img/logo.png" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Shop</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="category.html">Shop Category</a></li>
+									<li class="nav-item"><a class="nav-link" href="single-product.html">Product Details</a></li>
+									<li class="nav-item"><a class="nav-link" href="checkout.html">Product Checkout</a></li>
+									<li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
+									<li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
+								</ul>
+							</li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Blog</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+								</ul>
+							</li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Pages</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+									<li class="nav-item"><a class="nav-link" href="tracking.html">Tracking</a></li>
+									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+								</ul>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
+							<li class="nav-item">
+								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div class="search_input" id="search_input_box">
+			<div class="container">
+				<form class="d-flex justify-content-between">
+					<input type="text" class="form-control" id="search_input" placeholder="Search Here">
+					<button type="submit" class="btn"></button>
+					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+				</form>
+			</div>
+		</div>
+	</header>
+	<!-- End Header Area -->
 
-                </ul>
-                
-        </aside>
-        <div class="main">
-            <nav class="navbar justify-content-space-between pe-4 ps-2">
-                <button class="btn open">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar  gap-4">
-                    <div class="">
-                        <input type="search" class="search " placeholder="Search">
-                        <img class="search_icon" src="img/search.svg" alt="iconicon">
-                    </div>
-                    <!-- <img src="img/search.svg" alt="icon"> -->
-                    <img class="notification" src="img/new.svg" alt="icon">
-                    <div class="card new w-auto">
-                        <div class="list-group list-group-light">
-                            <div class="list-group-item px-3 d-flex justify-content-between align-items-center ">
-                                <p class="mt-auto">Notification</p><a href="#"><img src="img/settingsno.svg" alt="icon"></a>
-                            </div>
-                            <div class="list-group-item px-3 d-flex"><img src="img/notif.svg" alt="iconimage">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text mb-3">Some quick example text to build on the card title and make up
-                                        the bulk of the card's content.</p>
-                                    <small class="card-text">1  day ago</small>
-                                </div>
-                            </div>
-                            <div class="list-group-item px-3 d-flex"><img src="img/notif.svg" alt="iconimage">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text mb-3">Some quick example text to build on the card title and make up
-                                        the bulk of the card's content.</p>
-                                    <small class="card-text">1  day ago</small>
-                                </div>
-                            </div>
-                            <div class="list-group-item px-3 text-center"><a href="#">View all notifications</a></div>
-                        </div>
-                    </div>
-                    <div class="inline"></div>
-                    <div class="name">Admin</div>
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-icon pe-md-0 position-relative" data-bs-toggle="dropdown">
-                                <img src="img/photo_admin.svg" alt="icon">
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end position-absolute">
-                                <a class="dropdown-item" href="#">Profile</a>
-                                <a class="dropdown-item" href="#">Account Setting</a>
-                                <a class="dropdown-item" href="../">Log out</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+	<!-- start banner Area -->
+	<section class="banner-area">
+		<div class="container">
+			<div class="row fullscreen align-items-center justify-content-start">
+				<div class="col-lg-12">
+					<div class="active-banner-slider">
+						<!-- single-slide -->
+						<div class="row single-slide align-items-center d-flex">
+							<div class="col-lg-5 col-md-6">
+								<div class="banner-content">
+									<h1>Nike New <br>Collection!</h1>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+									
+								</div>
+							</div>
+							<div class="col-lg-7">
+								<div class="banner-img">
+									<img class="img-fluid" src="assets/img/banner/banner-img.png" alt="">
+								</div>
+							</div>
+	</section>
 
 
+        	<!-- start product Area -->
+	<section class="owl-carousel active-product-area section_gap">
+		<!-- single product slide -->
+		<div class="single-product-slider">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-6 text-center">
+						<div class="section-title">
+							<h1>Products</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore
+								magna aliqua.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<!-- single product -->
+                    @foreach ($product as $products)
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="images/{{ $products->image }}" >
+							<div class="product-details">
+								<div class="price">
+									<h6>{{ $products->prix }}DH</h6>
+									<h6 class="l-through">$210.00</h6>
+                                    <p>{{ $products->description }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+                    @endforeach
+					
+	</section>
+	<!-- end product Area -->
+    </section>
+    
+
+	<!-- End related-product Area -->
+
+	<!-- start footer Area -->
+	<footer class="footer-area section_gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3  col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>About Us</h6>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
+							magna aliqua.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4  col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Newsletter</h6>
+						<p>Stay update with our latest</p>
+						<div class="" id="mc_embed_signup">
+
+							<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+							 method="get" class="form-inline">
+
+								<div class="d-flex flex-row">
+
+									<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
+									 required="" type="email">
 
 
+									<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+									<div style="position: absolute; left: -5000px;">
+										<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+									</div>
 
+									<!-- <div class="col-lg-4 col-md-4">
+												<button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
+											</div>  -->
+								</div>
+								<div class="info"></div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3  col-md-6 col-sm-6">
+					<div class="single-footer-widget mail-chimp">
+						<h6 class="mb-20">Instragram Feed</h6>
+						<ul class="instafeed d-flex flex-wrap">
+							<li><img src="assets/img/i1.jpg" alt=""></li>
+							<li><img src="assets/img/i2.jpg" alt=""></li>
+							<li><img src="assets/img/i3.jpg" alt=""></li>
+							<li><img src="assets/img/i4.jpg" alt=""></li>
+							<li><img src="assets/img/i5.jpg" alt=""></li>
+							<li><img src="assets/img/i6.jpg" alt=""></li>
+							<li><img src="assets/img/i7.jpg" alt=""></li>
+							<li><img src="assets/img/i8.jpg" alt=""></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Follow Us</h6>
+						<p>Let us be social</p>
+						<div class="footer-social d-flex align-items-center">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
+				<p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer Area -->
 
+	<script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+	 crossorigin="anonymous"></script>
+	<script src="assets/js/vendor/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+	<script src="assets/js/jquery.nice-select.min.js"></script>
+	<script src="assets/js/jquery.sticky.js"></script>
+	<script src="assets/js/nouislider.min.js"></script>
+	<script src="assets/js/countdown.js"></script>
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
 
-
-
-            
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="{{ asset('js/dashboard.js') }}"></script>
-    <script src="{{ asset('js/script.js') }}"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="assets/js/gmaps.min.js"></script>
+	<script src="assets/js/main.js"></script>
 </body>
 
 </html>

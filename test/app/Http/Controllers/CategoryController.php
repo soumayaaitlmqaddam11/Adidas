@@ -23,7 +23,7 @@ class CategoryController extends Controller
          $category = new Category();
          $category->name = $request->name;
          $category->save();
-       return redirect('/ajouter')->with('status','category a bien été ajouté avec succés');
+       return redirect('/category')->with('status','category a bien été ajouté avec succés');
     }
     public function update_category($id){
         $category = Category::find($id);

@@ -26,11 +26,17 @@
                 <ul class="sidebar_nav">
                    
                     <li class="sidebar_item ">
-                        <a href="/category" class="sidebar_link"> <img src="img/agents.svg" alt="icon">Categorys</a>
+                        <a href="/category" class="sidebar_link">Categorys</a>
                     </li>
                    
                     <li class="sidebar_item active">
-                        <a href="/product" class="sidebar_link"><img src="img/articles.svg" alt="icon">Products</a>
+                        <a href="/product" class="sidebar_link">Products</a>
+                    </li>
+                    <li class="sidebar_item">
+                        <a href="/user" class="sidebar_link"><img src="img/articles.svg" alt="icon">Users</a>
+                    </li>
+                    <li class="sidebar_item">
+                        <a href="/role" class="sidebar_link"> <img src="img/agents.svg" alt="icon">Roles</a>
                     </li>
 
                 </ul>
@@ -100,7 +106,7 @@
                                 {{session('status')}}
                             </div>
                         @endif
-                        <form action="/update/traitement" method="POST" enctype="multipart/form-data">
+                        <form action="/update/traitementproduct" method="POST" enctype="multipart/form-data">
                             @csrf
                             <input type="text"name="id" style="display: none;"value="{{$product->id}}" >
                             <div class="mb-3">

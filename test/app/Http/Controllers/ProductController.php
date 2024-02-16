@@ -19,6 +19,15 @@ class productController extends Controller
     return view('products.product', compact('products'));
     
     } 
+
+    public function afficher() {
+
+        $product = DB::table('products')
+        ->join('categories', 'categories.id', '=', 'products.category_id')
+        ->select('products.*', 'categories.name as category_name')
+        ->get();
+        return view('test', compact('product'));
+    }
     
     public function ajouter_product(){
         $categories=Category::all();

@@ -32,7 +32,12 @@
                     <li class="sidebar_item">
                         <a href="/product" class="sidebar_link"><img src="img/articles.svg" alt="icon">Products</a>
                     </li>
-
+                    <li class="sidebar_item">
+                        <a href="/user" class="sidebar_link"><img src="img/articles.svg" alt="icon">Users</a>
+                    </li>
+                    <li class="sidebar_item">
+                        <a href="/role" class="sidebar_link"> <img src="img/agents.svg" alt="icon">Roles</a>
+                    </li>
                 </ul>
                 
         </aside>
@@ -100,7 +105,7 @@
                                 {{session('status')}}
                             </div>
                         @endif
-                        <form action="/update/traitement" method="POST">
+                        <form action="/update/traitementcategory" method="POST">
                             @csrf
                             <input type="text"name="id" style="display: none;"value="{{$category->id}}">
                             <div class="mb-3">

@@ -33,6 +33,12 @@
                     <li class="sidebar_item active">
                         <a href="/product" class="sidebar_link"><img src="img/articles.svg" alt="icon">Products</a>
                     </li>
+                    <li class="sidebar_item">
+                        <a href="/user" class="sidebar_link"><img src="img/articles.svg" alt="icon">Users</a>
+                    </li>
+                    <li class="sidebar_item">
+                        <a href="/role" class="sidebar_link"> <img src="img/agents.svg" alt="icon">Roles</a>
+                    </li>
 
                 </ul>
                 
